@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 
-export default function DoctorsPage() {
+export default function BookingsPage() {
     return(<div>
-        <Navbar page="doctors" />
+        <Navbar page="bookings" />
     </div>)
 }

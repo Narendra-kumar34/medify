@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Navbar.module.css";
 import { ReactComponent as MedifyIcon } from "../../assets/medifyIcon.svg";
 import Button from "../Button/Button";
+import { Link } from "react-router-dom";
 
 export default function Navbar({ page }) {
   return (
@@ -12,18 +13,28 @@ export default function Navbar({ page }) {
         cleanliness.
       </div>
       <nav className={page === "landing" ? styles.navbar : styles.otherNavbar}>
-        <MedifyIcon />
+        <Link to="/">
+          <MedifyIcon />
+        </Link>
         <div className={styles.navWrapper}>
-          <div className={styles.navLink}>Find Doctors</div>
+          <Link to="/doctors">
+            <div className={styles.navLink}>Find Doctors</div>
+          </Link>
           <div className={styles.navLink}>Hospitals</div>
           <div className={styles.navLink}>Medicines</div>
           <div className={styles.navLink}>Surgeries</div>
           <div className={styles.navLink}>Software for Provider</div>
           <div className={styles.navLink}>Facilities</div>
-          <Button value="My Bookings" />
+          <Link to="/bookings">
+            <Button value="My Bookings" />
+          </Link>
         </div>
       </nav>
-      {page !== "landing" && <div className={styles.navFooter}>{page === "bookings" && "My Bookings"}</div>}
+      {page !== "landing" && (
+        <div className={styles.navFooter}>
+          {page === "bookings" && "My Bookings"}
+        </div>
+      )}
     </div>
   );
 }
