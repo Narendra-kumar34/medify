@@ -1,0 +1,22 @@
+.wrapper {
+    background-image: linear-gradient(to right, rgba(231, 240, 255, 1), rgba(232, 241, 255, 0.47));
+    padding: 1.5rem 8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 5rem;
+}
+
+@media screen and (max-width: 768px){
+    .wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
