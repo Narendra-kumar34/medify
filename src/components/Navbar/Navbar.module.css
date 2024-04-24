@@ -1,0 +1,44 @@
+.header {
+    background-color: rgba(42, 167, 255, 1);
+    text-align: center;
+    padding: 0.5rem;
+    color: white;
+    text-wrap: wrap;
+}
+
+.navbar {
+    background-image: linear-gradient(to right, rgba(231, 240, 255, 1), rgba(232, 241, 255, 0.47));
+    padding: 1.5rem 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.otherNavbar {
+    padding: 1.5rem 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.navWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.navFooter {
+    background-image: linear-gradient(to right, rgba(42, 167, 255, 1), rgba(12, 140, 229, 1));
+    height: 7rem;
+    border-radius: 0rem 0rem 0.75rem 0.75rem;
+    padding: 2rem 0rem 0rem 10rem;
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+}
