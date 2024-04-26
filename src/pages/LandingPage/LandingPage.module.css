@@ -1,0 +1,19 @@
+.docCard {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.docName {
+    color: rgba(27, 60, 116, 1);
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.docDesignation {
+    font-size: 17px;
+    font-weight: 500;
+    color: rgba(42, 167, 255, 1);
+}

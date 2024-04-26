@@ -4,12 +4,13 @@ import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-export default function Carousel({ data, renderComponent }) {
+export default function Carousel({ data, renderComponent, type }) {
   return (
-    <div className={styles.wrapper}>
+    <div className={type === "specialist" ? styles.specialistWrapper : styles.wrapper}>
+      {type === "specialist" && <h1 style={{color: "rgba(27, 60, 116, 1)", textAlign: "center", marginBottom: "2rem"}}>Our Medical Specialist</h1>}
       <div className={styles.carousel}>
         <Swiper
-          style={{ paddingTop: "258px" }}
+          style={{ paddingTop: `${type !== "specialist" ? "258px" : "0px"}` }}
           initialSlide={0}
           modules={[Navigation]}
           spaceBetween={40}
@@ -19,7 +20,7 @@ export default function Carousel({ data, renderComponent }) {
               slidesPerView: 2,
             },
             768: {
-              slidesPerView: 3,
+              slidesPerView: `${type !== "specialist" ? 3 : 4}`,
             },
           }}
           allowTouchMove
