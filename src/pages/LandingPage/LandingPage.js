@@ -5,6 +5,7 @@ import CategorySearcher from "../../components/CategorySearcher/CategorySearcher
 import Carousel from "../../components/Swiper/Swiper";
 import SwiperPic1 from "../../assets/swiperPic1.png";
 import SwiperPic2 from "../../assets/swiperPic2.png";
+import Specialisation from "../../components/FindBySpecialisation/Specialisation";
 
 const swiperData = [SwiperPic1, SwiperPic2, SwiperPic1, SwiperPic2, SwiperPic1, SwiperPic2];
 
@@ -14,5 +15,6 @@ export default function LandingPage() {
         <Hero />
         <CategorySearcher />
         <Carousel data={swiperData} renderComponent={(ele) => <img src={ele} alt="carouselImg" />} />
+        <Specialisation />
     </div>)
 }
