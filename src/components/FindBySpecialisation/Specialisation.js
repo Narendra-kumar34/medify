@@ -26,7 +26,7 @@ export default function Specialisation() {
     <div className={styles.wrapper}>
       <h1 style={{ color: "rgba(27, 60, 116, 1)" }}>Find by specialisation</h1>
       <div className={styles.blocksWrapper}>
-        {data.map((block) => <div className={styles.block}><img src={block.image} alt="specialisationImage" /><div>{block.title}</div></div>)}
+        {data.map((block, idx) => <div className={styles.block} key={idx}><img src={block.image} alt="specialisationImage" /><div>{block.title}</div></div>)}
       </div>
       <Button value="View All" />
     </div>

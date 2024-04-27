@@ -10,6 +10,7 @@ import Specialisation from "../../components/FindBySpecialisation/Specialisation
 import Doctor1 from "../../assets/docPic1.png";
 import Doctor2 from "../../assets/docPic2.png";
 import Doctor3 from "../../assets/docPic3.png";
+import PatientCaring from "../../components/PatientCaring/PatientCaring";
 
 const swiperData = [
   SwiperPic1,
@@ -51,6 +52,7 @@ export default function LandingPage() {
           </div>
         )}
       />
+      <PatientCaring />
     </div>
   );
 }
