@@ -15,6 +15,7 @@ import Blog from "../../components/Blog/Blog";
 import Familes from "../../components/Families/Families";
 import Faq from "../../components/Faq/Faq";
 import Download from "../../components/Download/Download";
+import Footer from "../../components/Footer/Footer";
 
 const swiperData = [
   SwiperPic1,
@@ -61,6 +62,7 @@ export default function LandingPage() {
       <Familes />
       <Faq />
       <Download />
+      <Footer />
     </div>
   );
 }

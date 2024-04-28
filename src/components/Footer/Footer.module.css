@@ -1,0 +1,56 @@
+.wrapper {
+    background-color: rgba(27, 60, 116, 1);
+    padding: 6rem 10rem 4rem 10rem;
+    color: white;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10rem;
+    padding-bottom: 4rem;
+    flex-wrap: wrap-reverse;
+}
+
+.iconsWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: stretch;
+    gap: 10rem;
+}
+
+.linksWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.listWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.dummyAccordion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.accordionText {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.copywrite {
+    padding-top: 4rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+    font-weight: 400;
+}
