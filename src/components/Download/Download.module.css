@@ -1,0 +1,101 @@
+.wrapper {
+    background-image: linear-gradient(to right, rgba(231, 240, 255, 1), rgba(232, 241, 255, 0.47));
+    padding: 4rem 8rem 0rem 8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.headline {
+    color: rgba(27, 60, 116, 1);
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.phoneNumbWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.phoneNoBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.countryCode {
+    padding: 0.64rem;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.inputField {
+    padding: 0.65rem;
+    background-color: white;
+    width: 22rem;
+    border: none;
+    font-size: 14px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.linksWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 2rem;
+}
+
+.vector {
+    position: absolute;
+    top: 20%;
+    left: -12%;
+}
+
+.picsWrapper {
+    position: relative;
+}
+
+.picBox1 {
+    position: relative;
+    left: 38%;
+}
+
+.picBox2 {
+    position: absolute;
+    top: 15%;
+    left: 7%;
+    z-index: 10;
+}
+
+.phoneBorder {
+    position: relative;
+    z-index: 2;
+}
+
+.phonePic {
+    position: absolute;
+    top: 7.5%;
+    left: 0.5%;
+}

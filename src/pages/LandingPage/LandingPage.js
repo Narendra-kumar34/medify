@@ -14,6 +14,7 @@ import PatientCaring from "../../components/PatientCaring/PatientCaring";
 import Blog from "../../components/Blog/Blog";
 import Familes from "../../components/Families/Families";
 import Faq from "../../components/Faq/Faq";
+import Download from "../../components/Download/Download";
 
 const swiperData = [
   SwiperPic1,
@@ -59,6 +60,7 @@ export default function LandingPage() {
       <Blog />
       <Familes />
       <Faq />
+      <Download />
     </div>
   );
 }
