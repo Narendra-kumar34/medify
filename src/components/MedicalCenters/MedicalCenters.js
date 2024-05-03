@@ -5,6 +5,7 @@ import axios from "axios";
 import { ReactComponent as SearchIconWhite } from "../../assets/SearchIconWhite.svg";
 import { ReactComponent as VerifyIcon } from "../../assets/DoctorsPage/verifyIcon.svg";
 import HospitalsCard from "../HospitalsCard/HospitalsCard";
+import AdvertisementCard from "../../assets/DoctorsPage/advertisementCard.png";
 
 export default function MedicalCenters() {
   const [state, setState] = useState("");
@@ -101,31 +102,35 @@ export default function MedicalCenters() {
           <input type="submit" value="Search" className={styles.searchInput} />
         </div>
       </form>
-      {searchData.city && (<><div className={styles.headline}>
-        {hospitals.length} medical centers available in {city}
-      </div>
-      <div className={styles.subLine}>
-        <div>
-          <VerifyIcon />
-        </div>
-        <div>
-          Book appointments with minimum wait-time & verified doctor details
-        </div>
-      </div>
-      <div className={styles.content}>
-        <div className={styles.hospitalsWrapper}>
-          {hospitals.length > 0 &&
-            hospitals.map((hospital) => (
-              <HospitalsCard
-                name={hospital["Hospital Name"]}
-                address={hospital["Address"]}
-                hospitalType={hospital["Hospital Type"]}
-                rating={hospital["Hospital overall rating"]}
-              />
-            ))}
-        </div>
-        <div className={styles.advertisementCard}></div>
-      </div></>)}
+      {searchData.city && (
+        <>
+          <div className={styles.headline}>
+            {hospitals.length} medical centers available in {searchData.city}
+          </div>
+          <div className={styles.subLine}>
+            <div>
+              <VerifyIcon />
+            </div>
+            <div>
+              Book appointments with minimum wait-time & verified doctor details
+            </div>
+          </div>
+          <div className={styles.content}>
+            <div className={styles.hospitalsWrapper}>
+              {hospitals.length > 0 &&
+                hospitals.map((hospital) => (
+                  <HospitalsCard
+                    name={hospital["Hospital Name"]}
+                    address={hospital["Address"]}
+                    hospitalType={hospital["Hospital Type"]}
+                    rating={hospital["Hospital overall rating"]}
+                  />
+                ))}
+            </div>
+            <div className={styles.advertisementCard}><img src={AdvertisementCard} alt="AdvertisementCard" /></div>
+          </div>
+        </>
+      )}
     </div>
   );
 }
