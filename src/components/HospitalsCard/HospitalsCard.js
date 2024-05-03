@@ -6,7 +6,7 @@ import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-export default function HospitalsCard({ name, address, hospitalType, rating }) {
+export default function HospitalsCard({ name, address, hospitalType, rating, type, bookingTime, bookingDate }) {
   const [selectedTime, setSelectedTime] = useState(null);
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   const [bookingCard, setBookingCard] = useState(false);
@@ -36,14 +36,15 @@ export default function HospitalsCard({ name, address, hospitalType, rating }) {
       };
       data.push(currData);
       localStorage.setItem("bookings", JSON.stringify(data));
+      setBookingCard(false);
       console.log("Booking confirmed");
       console.log(data);
     }
   }
 
   return (
-    <div className={styles.wrapper} onClick={() => setBookingCard(!bookingCard)}>
-      <div className={styles.card}>
+    <div className={styles.wrapper}>
+      <div className={type === "hospitalCard" ? styles.card : styles.bookingCard}  onClick={() => setBookingCard(!bookingCard)}>
         <div>
           <img src={hospitalPic} alt="hospitalPic" />
         </div>
@@ -72,14 +73,18 @@ export default function HospitalsCard({ name, address, hospitalType, rating }) {
             </span>
           </div>
         </div>
-        <div className={styles.availabilityCol}>
+        {type === "hospitalCard" && <div className={styles.availabilityCol}>
           <div style={{ color: "rgba(2, 164, 1, 1)" }}>Available Today</div>
           <button className={styles.bookingButton} onClick={handleBooking}>
             Book FREE Center Visit
           </button>
-        </div>
+        </div>}
+        {type === "bookingCard" && <div className={styles.bookingDetails}>
+          <div className={styles.bookingTime}>{bookingTime}</div>
+          <div className={styles.bookingDate}>{bookingDate}</div>
+          </div>}
       </div>
-      {bookingCard && <div className={styles.bookingWrapper}>
+      {(type === "hospitalCard" && bookingCard) && <div className={styles.bookingWrapper}>
         <div className={styles.carouselWrapper}>
           <Swiper
             style={{}}

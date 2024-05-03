@@ -4,6 +4,7 @@
     align-items: center;
     gap: 1rem;
     padding: 4rem 8rem 2rem 8rem;
+    background-color: white;
 }
 
 .subWrapper {

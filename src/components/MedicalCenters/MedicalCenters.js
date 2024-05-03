@@ -124,6 +124,7 @@ export default function MedicalCenters() {
                     address={hospital["Address"]}
                     hospitalType={hospital["Hospital Type"]}
                     rating={hospital["Hospital overall rating"]}
+                    type="hospitalCard"
                   />
                 ))}
             </div>
